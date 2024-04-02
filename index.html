@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+
+          main p {
+            margin-bottom: 1.25rem;
+          }
+        }
+    </style>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+</head>
+<body class="flex min-h-full flex-col">
+    <header class="bg-slate-600 text-white h-20 p-5 w-[1280px] mx-auto">
+            This is the Header
+    </header>
+
+    <main class="grow p-5 w-[1280px] mx-auto"">
+        <h2 class="font-bold text-lg mb-5">This is the Main Content.</h2>
+
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus minima, nulla vel aperiam voluptatem nisi quis sequi voluptatibus repellat perferendis eveniet alias sunt. Nesciunt iure deserunt odio velit, quam quaerat facilis sed. Doloremque similique sapiente nostrum numquam molestiae fugit itaque magnam, repellat incidunt atque ut tempore, quaerat aliquid voluptates culpa doloribus placeat eligendi temporibus! Totam quia unde debitis beatae labore, sapiente a officia repellat dicta aut nesciunt ratione atque cupiditate expedita error architecto non culpa omnis doloremque asperiores? Recusandae illo consectetur, enim nisi ducimus totam, consequatur atque ipsa molestiae eligendi ea et facilis? Amet nam eligendi dolorum, quisquam quia dolores.
+        </p>
+
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione cum, aliquid adipisci sint earum, vel labore voluptate consectetur minus quidem ut nesciunt enim! Amet officiis tempore perspiciatis ratione est, doloribus commodi voluptate aperiam ullam culpa consequuntur non. Officiis animi veniam dolorum impedit molestias nulla labore. Mollitia ratione accusamus sed non, provident nostrum aliquid ullam cumque, est ipsam hic cupiditate ea corporis? Eaque nam laborum aperiam pariatur, accusamus eveniet repellat nisi! Vero adipisci voluptate quaerat perspiciatis provident fuga architecto iste. Consectetur vitae illum eum fugiat, rerum quidem ab dicta at consequatur. Adipisci animi optio consectetur iure nihil quas, nulla earum, voluptate exercitationem velit officia! Eveniet nam dolore facere fuga impedit illo nemo rem in sapiente porro voluptate distinctio iusto deleniti minima, nesciunt tempora sed fugiat, quisquam eius necessitatibus. Quia quam tempora aut, autem dolore commodi facere, voluptatem molestias quas sunt esse repellat laboriosam voluptatibus sequi. Alias vel laboriosam repudiandae maxime quisquam?
+        </p>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita quae esse est animi quam debitis harum, fugiat architecto, error ducimus fuga repellat magni? Odit iure illum neque adipisci eveniet, quibusdam doloribus quidem error, vero dignissimos repellat sed fuga animi delectus accusamus numquam, nesciunt cupiditate? Dolorum nemo asperiores ex voluptas modi, accusamus quibusdam. Nisi, illum. Nihil, libero! In inventore reiciendis voluptatibus maiores voluptatem! Fugiat tempora laudantium porro, repudiandae quas molestiae, debitis dicta, laboriosam corporis repellat beatae!
+        </p>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione tempore quam totam molestiae soluta quasi suscipit et provident animi, eaque, iusto, voluptatum distinctio dicta consequuntur quas consectetur commodi recusandae illum fugiat reprehenderit. Id aspernatur repellendus tempore? Enim impedit iure illum, sequi ducimus ut natus autem laborum magni voluptates commodi hic repellendus, totam nobis officia exercitationem laboriosam. Deserunt laudantium ut iste. Iste, vitae voluptates facere delectus odit ipsam, fuga rem libero sunt consequatur quisquam hic labore minima aliquid cumque, facilis error! Totam delectus expedita itaque dolor? Corporis ad suscipit voluptas? Corporis?
+        </p>
+    </main>
+
+    <footer class="bg-slate-600 text-white h-10 py-2 px-5 w-[1280px] mx-auto"">
+        This is the Footer
+    </footer>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
